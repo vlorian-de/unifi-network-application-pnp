@@ -5,20 +5,20 @@ Welcome to this repository for a seamless Plug&Play Docker Compose setup for the
 ## Features
 
 - **Complete Package**: Includes a Docker Compose file, a well-organized folder structure, and an initialization script. This setup is designed to be as straightforward as possible.
-- **Based on "Trusted" Sources**: The Docker Compose is based on the docker image from [linuxserver](https://github.com/linuxserver), specifically leveraging the proposal by [Natan Keddem](https://github.com/natankeddem) (as seen in [this issue](https://github.com/linuxserver/docker-unifi-network-application/issues/13)).
+- **Based on "trusted sources" 🙈**: The Docker Compose is based on the docker image from [linuxserver](https://github.com/linuxserver),  leveraging the proposal by [Natan Keddem](https://github.com/natankeddem) (as seen in [this issue](https://github.com/linuxserver/docker-unifi-network-application/issues/13)).
 - **Custom Enhancements**: While most of the credit goes to LSIO and Natan Keddem for their foundational work, this repository includes a few minor but crucial tweaks:
   - Synchronized database name between the script and Docker Compose.
   - Removal of an unnecessary external port for MongoDB, streamlining the setup.
 
-## Important Networking Note
+## Important For Adopting Devices
 
-The Unifi Network Application within the Docker Compose network has a different IP address than the Docker Host in the actual network. This means that the Unifi Network Application is unaware of the host's actual network IP address. To adopt devices, you need to override the "Inform host" address. This can be done by navigating to Settings -> System -> Advanced in the Unifi Controller UI and applying the necessary override.
+The Unifi Network Application within the Docker Compose network has a different IP address than the Docker Host in the actual network. This means that the Unifi Network Application is unaware of the host's actual network IP address. To adopt devices, you need to override the "Inform host" address. This can be done by navigating to **Settings -> System -> Advanced** in the Unifi Controller UI and applying the necessary override.
 
 ## Getting Started
 
 1. **Clone the Repository**:
    ```bash
-   git clone [Repository URL]
+   git clone https://github.com/vlorian-de/unifi-network-application-pnp
    ```
 
 2. **Run Docker Compose**
@@ -31,4 +31,4 @@ The Unifi Network Application within the Docker Compose network has a different 
    Follow the setup instructions to configure your network.
 
 ## Acknowledgements
-A huge thanks to the teams at linuxserver and especially to Natan Keddem for their initial work and contributions which made this project possible.
+A huge thanks to the team at linuxserver.io and especially to Natan Keddem for their initial work and contributions which made this repo possible.
